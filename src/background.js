@@ -1,4 +1,4 @@
-import { ReclaimClient } from "@reclaimprotocol/zk-fetch";
+const { ReclaimClient } = import("@reclaimprotocol/zk-fetch");
 
 let isMonitoring = false;
 
