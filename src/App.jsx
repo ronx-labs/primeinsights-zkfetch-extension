@@ -16,15 +16,11 @@ function App() {
   };
 
   useEffect(() => {
-    // Clear the badge when the popup is opened
-    chrome.action.setBadgeText({ text: "" });
-  }, []);
-
-  useEffect(() => {
     chrome.storage.sync.get(["isMonitoring", "redirectUrl"], (data) => {
       setIsMonitoring(data.isMonitoring || false);
       setRedirectUrl(data.redirectUrl || "");
     });
+    chrome.action.setBadgeText({ text: "" });
   }, []);
 
   return (
