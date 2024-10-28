@@ -48,6 +48,6 @@ chrome.webRequest.onHeadersReceived.addListener(
       console.log(reclaimClient);
     }
   },
-  { urls: ["https://*.amazon.com/*"] },
+  { urls: ["https://*.amazon.com/*", "https://amazon.com/*"] },
   ["responseHeaders"]
 );
